@@ -28,12 +28,12 @@ jobs:
 
     steps:
       - name: Checkout plugin
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           path: plugin
 
       - name: Checkout Frosty ${{ env.FROSTY_REF }}
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
         with:
           repository: ${{ env.FROSTY_REPO }}
           ref: ${{ env.FROSTY_REF }}
@@ -47,7 +47,7 @@ jobs:
           Copy-Item plugin/* frosty/Plugins/OpenUnmodifiedPlugin -Recurse -Exclude .git,.github
 
       - name: Setup MSBuild
-        uses: microsoft/setup-msbuild@v2
+        uses: microsoft/setup-msbuild@v3
 
       - name: Build
         shell: pwsh
