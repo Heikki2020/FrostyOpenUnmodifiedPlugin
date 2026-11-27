@@ -1,6 +1,6 @@
 using Frosty.Core;
 using Frosty.Core.Controls;
-using FrostySdk.Ebx;
+using FrostySdk.IO;
 using FrostySdk.Interfaces;
 using FrostySdk.Managers;
 using System.Collections.Generic;
